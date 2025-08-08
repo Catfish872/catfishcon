@@ -5,15 +5,15 @@ from pydantic import BaseModel, Field
 class ChatCompletionRequest(BaseModel):
     model: str
     messages: List[Dict[str, Any]]
-    temperature: float = 0.7
+    temperature: float = 1.5
     top_p: Optional[float] = None
     top_k: Optional[float] = None
     n: int = 1
     stream: bool = False
     stop: Optional[Union[str, List[str]]] = None
     max_tokens: Optional[int] = None
-    presence_penalty: Optional[float] = 0.0
-    frequency_penalty: Optional[float] = 0.0
+    presence_penalty: Optional[float] = 0.25
+    frequency_penalty: Optional[float] = 0.5
     seed: Optional[int] = None
     logprobs: Optional[int] = None
     response_logprobs: Optional[bool] = None
