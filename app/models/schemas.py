@@ -18,7 +18,7 @@ class ChatCompletionRequest(BaseModel):
     seed: Optional[int] = None
     logprobs: Optional[int] = None
     response_logprobs: Optional[bool] = None
-    thinking_budget: Optional[int] = None
+    thinking_budget: Optional[int] = 512
     reasoning_effort: Optional[str] = None
     # 函数调用
     tools: Optional[List[Dict[str, Any]]] = None
